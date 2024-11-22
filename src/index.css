@@ -4,7 +4,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: black;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -29,12 +29,14 @@ body {
 
   cursor: url("./assets/arrow.png"), auto;
 
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
   background-image: url("./assets/loading_screen.plot_darkest_dungeon_1.png");
   /* background-image: url("./assets/loading_screen.plot_town_invasion_0.png"); */
   /* background-image: url("./assets/camping_trainer.character_background.png"); */
   /* background-image: url("./assets/glossary_background.png"); */
 
-  background-size: cover;
   /* background-image: url("./assets/credits.background.png"); */
   /* background-image: url("./assets/town_bg_post_dd_3.png"); */
 }
@@ -168,5 +170,34 @@ body {
 
   & img {
     width: 60px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    background-attachment: scroll;
+    background-color: black;
+  }
+
+  .main {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .all-heroes-section {
+    border: none;
+    height: 100%;
+    margin: 0 auto;
+    align-items: center;
+
+    & div {
+      justify-content: center;
+    }
+  }
+
+  .combinations {
+    margin-top: 3rem;
+    flex-direction: column;
+    align-items: center;
   }
 }
