@@ -1,0 +1,172 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: DDFontPrimary;
+  src: url("./assets/DwarvenAxe BB W00 Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100dvh;
+  font-family: DDFontPrimary;
+
+  cursor: url("./assets/arrow.png"), auto;
+
+  background-image: url("./assets/loading_screen.plot_darkest_dungeon_1.png");
+  /* background-image: url("./assets/loading_screen.plot_town_invasion_0.png"); */
+  /* background-image: url("./assets/camping_trainer.character_background.png"); */
+  /* background-image: url("./assets/glossary_background.png"); */
+
+  background-size: cover;
+  /* background-image: url("./assets/credits.background.png"); */
+  /* background-image: url("./assets/town_bg_post_dd_3.png"); */
+}
+
+#root {
+  max-width: 1280px;
+  height: 100dvh;
+  /* background-image: url("./assets/mailing_list.background.png"); */
+  /* background-color: rgba(36, 36, 36, 0.5); */
+  /* background-image: url("./assets/title_bg.png"); */
+  background-size: cover;
+  /* background-image: url("./assets/town_bg_post_dd_3.png"); */
+
+  margin: 0 auto;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  /* padding: 5rem 2rem; */
+}
+
+.all-heroes-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100vh;
+  max-width: 325px;
+
+  border-right: 3px solid;
+  border-image: linear-gradient(to bottom, #0f0f0f, rgb(122, 122, 122), #0f0f0f)
+    1;
+
+  padding-right: 1rem;
+
+  & div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  & h2 {
+    margin-top: 5rem;
+    font-size: 2.2rem;
+    opacity: 70%;
+  }
+}
+
+.party-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 2rem;
+}
+
+.party {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.3rem;
+  background-color: black;
+  border: 1px solid gold;
+  border-image: linear-gradient(to right, #8b6508, gold, #8b6508) 1;
+}
+
+.party-name {
+  background: linear-gradient(to right, #8b6508, gold, #8b6508);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.party-name:has(.party-name-empty) {
+  background: white;
+  background-clip: text;
+  opacity: 50%;
+}
+
+.combinations {
+  display: flex;
+  gap: 3rem;
+
+  & div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 325px;
+
+    & h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid rgb(187, 186, 186);
+      opacity: 70%;
+    }
+  }
+}
+
+.heroes-party-combo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  & h3 {
+    font-size: 2rem;
+    color: rgb(161, 138, 7);
+  }
+
+  & div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  & .party-combo {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0.3rem;
+    border-width: 2px;
+    border-style: solid;
+    border-image: linear-gradient(
+        to bottom,
+        rgba(255, 215, 0, 1),
+        rgba(255, 215, 0, 0)
+      )
+      1;
+  }
+
+  & img {
+    width: 60px;
+  }
+}
